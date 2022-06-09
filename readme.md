@@ -25,8 +25,12 @@
 Автоматическая сборка и проверка идет по версии платформы, указанной последней строке файла `ONEC_VERSION`
 
 
-# NODO: Публикация ИБ в контейнере
+# TODO: Публикация ИБ в контейнере
 
 ```
-webinst -publish -apache24 -wsdir <ИМЯ ПУБЛИКАЦИИ> -dir /var/www/<ИМЯ ПУБЛИКАЦИИ> -connstr “Srvr=<ИМЯ СЕРВЕРА;Ref=<ИМЯ БАЗЫ>” -confpath /etc/apache2/sites-enabled/000-default.conf
+webinst -publish -apache24 -wsdir Demo_pretty -dir /var/www/pretty -confPath "/etc/apache2/sites-enabled/000-default.conf" -connstr “Srvr=onec_server;Ref=test”
+
+ http://127.0.0.1/Demo_pretty/hs/PrettyAPI/V1/Список
+
+
 ```
